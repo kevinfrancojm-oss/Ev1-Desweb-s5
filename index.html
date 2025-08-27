@@ -304,7 +304,11 @@
             margin-bottom: 5px;
         }
 
-        /* Estilos para la nueva sección UTM */
+        /* =========================================== */
+        /* SECCIÓN UTM - HERRAMIENTA DE DESARROLLO      */
+        /* (OCULTAR PARA VERSIÓN DE PRODUCCIÓN)        */
+        /* =========================================== */
+        /*
         .utm-section {
             background-color: #1a1a1a;
             padding: 30px;
@@ -385,6 +389,8 @@
         .utm-button:hover {
             background-color: #00a000;
         }
+        */
+        /* ===== FIN DE SECCIÓN UTM - HERRAMIENTA DE DESARROLLO ===== */
        
         .page-section {
             padding: 80px 0;
@@ -403,7 +409,13 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#info">Información</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <!-- =========================================== -->
+                <!-- ENLACE UTM - HERRAMIENTA DE DESARROLLO       -->
+                <!-- (OCULTAR PARA VERSIÓN DE PRODUCCIÓN)        -->
+                <!--
                 <li><a href="#utm">Parámetros UTM</a></li>
+                -->
+                <!-- ===== FIN DE ENLACE UTM ===== -->
             </ul>
         </div>
     </nav>
@@ -461,7 +473,10 @@
             </div>
         </section>
 
-        <!-- Nueva sección UTM -->
+        <!-- =========================================== -->
+        <!-- SECCIÓN UTM - HERRAMIENTA DE DESARROLLO      -->
+        <!-- (OCULTAR PARA VERSIÓN DE PRODUCCIÓN)        -->
+        <!--
         <section id="utm" class="page-section">
             <div class="utm-section">
                 <h2>Parámetros UTM para Campañas</h2>
@@ -521,6 +536,8 @@
                 </div>
             </div>
         </section>
+        -->
+        <!-- ===== FIN DE SECCIÓN UTM - HERRAMIENTA DE DESARROLLO ===== -->
 
         <!-- Contacto -->
         <section id="contacto" class="page-section">
@@ -560,6 +577,10 @@
             if(evt) evt.currentTarget.classList.add("active");
         }
 
+        // ===========================================
+        // FUNCIONES UTM - HERRAMIENTA DE DESARROLLO
+      
+        /*
         // Función para generar URLs con parámetros UTM
         function generateUTM() {
             const baseUrl = document.getElementById('base-url').value;
@@ -612,6 +633,8 @@
             
             return Object.keys(utmParams).length > 0 ? utmParams : null;
         }
+        */
+        // ===== FIN DE FUNCIONES UTM - HERRAMIENTA DE DESARROLLO =====
 
         // Al cargar la página
         document.addEventListener('DOMContentLoaded', function() {
@@ -623,13 +646,18 @@
                 }
             });
             
+            // ===========================================
+            // DETECCIÓN UTM - HERRAMIENTA DE DESARROLLO
+            // (OCULTAR PARA VERSIÓN DE PRODUCCIÓN)
+            /*
             // Comprobar si hay parámetros UTM en la URL
             const utmParams = getUTMParameters();
             if (utmParams) {
                 console.log('Parámetros UTM detectados:', utmParams);
-                // Aquí podrías guardar estos parámetros en una cookie o localStorage
-                // para atribución posterior
+               
             }
+            */
+            // ===== FIN DE DETECCIÓN UTM =====
             
             // Navegación por anclas
             if(window.location.hash) {
@@ -642,14 +670,5 @@
             }
         });
     </script>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGCYFWTC86"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JGCYFWTC86');
-</script>
 </body>
 </html>
